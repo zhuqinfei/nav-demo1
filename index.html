@@ -50,7 +50,7 @@
                 var key = button2['id'] //q w e r ..
                 var x = prompt('给我一个网址')
                 hash[key] = x
-                img2.src = 'http://' + x + '/favicon.ico'
+                img2.src =x
                 img2.onerror = function (xxx) {
                     xxx.target.src = '//i.loli.net/2019/02/17/5c683b5a60958.png'
                 }
@@ -61,7 +61,7 @@
         function createImage(domain) {
             var img = tag('img')
             if (domain) {
-                img.src = 'http://' + domain + '/favicon.ico'
+                img.src =domain + '/favicon.ico'
             } else {
                 img.src = '//i.loli.net/2019/02/17/5c683b5a60958.png'
             }
@@ -78,9 +78,11 @@
                 length: 3
             }
             var hash = {
-                q: 'qq.com', w: 'weibo.com', e: 'ele.me', r: 'renren.com', t: 'tianya.com',
-                y: 'youtube.com', u: 'UC.com', i: 'iqiyi.com', o: 'opera.com', p: 'undefined',
-                a: 'acfun.tv', s: 'sohu.com', z: 'zhihu.com', m: 'www.mcdonalds.com.cn', v: 'wangdoc.com/javascript', x: 'xiedaimala.com',
+                q: 'https://www.qq.com/', w: 'https://weibo.com/', e: 'https://www.ele.me/', 
+                r: 'https://renren.com',  i: 'https://www.iqiyi.com/', o: 'https://www.opera.com/zh-cn', 
+                a: 'http://acfun.tv/', s: 'https://www.sohu.com/', z: 'https://www.zhihu.com/', 
+                m: 'https://www.mcdonalds.com.cn/', v: 'https://wangdoc.com/javascript/', x: 'https://xiedaimala.com/',
+                b: 'https://www.baidu.com',h:'https://www.huya.com/',l:'https://lol.qq.com/'
             }
             var hashInLocalStorage = getFromLocalStorage('zzz')
             if (hashInLocalStorage) {
@@ -121,7 +123,7 @@
             document.onkeypress = function (zxcv) {
                 var key = zxcv['key']
                 var websibe = hash[key]
-                window.open('http://' + websibe, '_blank')
+                window.open(websibe, '_blank')
             }
         }
     </script>
